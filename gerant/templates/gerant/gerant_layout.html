@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% load static %}
+
+{% block title %}
+    Gestock - Gérant
+{% endblock  %}
+
+{% block stylesheets %}
+<link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'assets/css/core.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'assets/css/icons.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'assets/css/components.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'assets/css/pages.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'assets/css/menu.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'assets/css/responsive.css' %}" rel="stylesheet" type="text/css">
+
+<script src="{% static 'assets/js/modernizr.min.js' %}"></script>
+{% endblock  %}
+
+
+{% block javascripts %}
+    <script>
+        var resizefunc = [];
+    </script>
+
+    <!-- Main  -->
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/detect.js' %}"></script>
+    <script src="{% static 'assets/js/fastclick.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.slimscroll.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.blockUI.js' %}"></script>
+    <script src="{% static 'assets/js/waves.js' %}"></script>
+    <script src="{% static 'assets/js/wow.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.nicescroll.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.scrollTo.min.js' %}"></script>
+
+    <script src="{% static 'assets/js/jquery.app.js' %}"></script>
+{% endblock  %}

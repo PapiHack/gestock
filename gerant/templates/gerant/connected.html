@@ -1,0 +1,96 @@
+{% extends "gerant/gerant_layout.html" %}
+
+{% load static %}
+
+{% block body %}
+    {% include "partials/_nav.html" %}
+
+    <div class="wrapper">
+            <div class="container">
+
+                <!-- Page-Title -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-primary dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="false">Settings <span class="m-l-5"><i class="fa fa-cog"></i></span></button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                        <h4 class="page-title">Welcome !</h4>
+                    </div>
+                </div>
+
+
+                <!-- Start Widget -->
+                <div class="row">
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="mini-stat clearfix bx-shadow bg-info">
+                            <span class="mini-stat-icon"><i class="ion-social-usd"></i></span>
+                            <div class="mini-stat-info text-right">
+                                <span class="counter">15852</span>
+                                Total Sales
+                            </div>
+                            <div class="tiles-progress">
+                                <div class="m-t-20">
+                                    <h5 class="text-uppercase text-white m-0">Last week's Sales <span class="pull-right">235</span></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="mini-stat clearfix bg-purple bx-shadow">
+                            <span class="mini-stat-icon"><i class="ion-ios7-cart"></i></span>
+                            <div class="mini-stat-info text-right">
+                                <span class="counter">956</span>
+                                New Orders
+                            </div>
+                            <div class="tiles-progress">
+                                <div class="m-t-20">
+                                    <h5 class="text-uppercase text-white m-0">Last week's Orders <span class="pull-right">59</span></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="mini-stat clearfix bg-primary bx-shadow">
+                            <span class="mini-stat-icon"><i class="ion-android-contacts"></i></span>
+                            <div class="mini-stat-info text-right">
+                                <span class="counter">5210</span>
+                                New Users
+                            </div>
+                            <div class="tiles-progress">
+                                <div class="m-t-20">
+                                    <h5 class="text-uppercase text-white m-0">Last month's Users <span class="pull-right">136</span></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="mini-stat clearfix bg-success bx-shadow">
+                            <span class="mini-stat-icon"><i class="ion-eye"></i></span>
+                            <div class="mini-stat-info text-right">
+                                <span class="counter">20544</span>
+                                Unique Visitors
+                            </div>
+                            <div class="tiles-progress">
+                                <div class="m-t-20">
+                                    <h5 class="text-uppercase text-white m-0">Last month's Visitors <span class="pull-right">1026</span></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- End row-->
+
+        </div>
+
+    {% include "partials/_footer.html" %}
+{% endblock %}

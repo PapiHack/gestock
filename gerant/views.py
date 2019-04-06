@@ -5,8 +5,7 @@ from django import forms
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.cache import cache_control
 import re
-from .models import Admin
-from django.http import HttpResponse
+from .models import Gerant
 
 # Create your views here.
 
@@ -21,28 +20,28 @@ def index(request):
             username = form['login']
             mdp = form['mdp']
             try:
-                admin = Admin.objects.get(pseudo=username)
+                gerant = Gerant.objects.get(pseudo=username)
             except:
-                admin = False
+                gerant = False
             user = authenticate(request, username=username, password=mdp)
-            if user is not None and user.is_active and admin is not False:
+            if user is not None and user.is_active and gerant is not False:
                 login(request, user)
-                return redirect('admin_login')
+                return redirect('gerant_login')
             else:
                 auth = False
-    return render(request, 'gestock_admin/index.html', {'auth': auth})
+    return render(request, 'gerant/index.html', {'auth': auth})
 
 def forgot(request):
-    return render(request, 'gestock_admin/forgot.html')
+    return render(request, 'gerant/forgot.html')
 
 @cache_control(no_cache=True, must_revalidate=True, no_store=True)
-@login_required(login_url='admin_home')
+@login_required(login_url='gerant_home')
 def deconnexion(request):
     logout(request)
-    return redirect('admin_home')
+    return redirect('gerant_home')
 
 @cache_control(no_cache=True, must_revalidate=True, no_store=True)
-@login_required(login_url='admin_home')
+@login_required(login_url='gerant_home')
 def connected(request):
-    admin = Admin.objects.get(pseudo=request.user)
-    return render(request, 'gestock_admin/connected.html', locals())
+    gerant = Gerant.objects.get(pseudo=request.user)
+    return render(request, 'gerant/connected.html', locals())

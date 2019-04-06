@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'gestock_admin',
+    'gerant',
 ]
 
 MIDDLEWARE = [

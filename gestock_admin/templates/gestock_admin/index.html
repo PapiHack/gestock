@@ -1,11 +1,6 @@
-{% extends "admin_layout.html" %}
+{% extends "gestock_admin/admin_layout.html" %}
 
 {% block body %}
-{% if auth is False %}
-  <script>
-    alert('Login ou mdp incorrecte !')
-  </script>
-{% endif %}
   <div class="container">
     <div class="card card-login mx-auto mt-5">
       <div class="card-header">Connection à l'administration</div>
@@ -38,4 +33,11 @@
   <script>
     document.body.className = 'bg-dark';
   </script>
+
+{% if auth is False %}
+<script>
+  alert('Login ou mot de passe incorrecte !')
+</script>
+{% endif %}
+
 {% endblock %}
